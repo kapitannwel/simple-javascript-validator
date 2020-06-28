@@ -15,7 +15,7 @@ npm install simple-javascript-validator
 - email = Textbox's value must be an email
 - gtzero = Select tag must have a value
 
-**gtzero** - Because select tag's initial value is zero as stated in the example below:
+**gtzero** - Because select tag's initial value is zero as shown in the example below:
 ```
 <select>
   <option value="0" selected="selected">- select -</option>
@@ -41,12 +41,11 @@ var validateData = {
   role  : role + '|gtzero'
 };
 
-var validation = validateInputs(validateData);
+var error_msgs = validateInputs(validateData);
 
-if(validation.length){
-  var error_msgs = formatErrorMessage(validation);
-
+if(error_msgs){
   console.log(error_msgs);
+
   //toastr.error(error_msgs, 'Ooops!');
 
   e.preventDefault();
