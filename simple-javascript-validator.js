@@ -65,7 +65,7 @@ function emailValidator(key, value)
 /* ======= start - start main validator function ======= */
 function validateInputs(data)
 {
-  var msg = '';
+  var error_msg = '';
 
   var items = Object.keys(data);
   var errors = [];
@@ -121,6 +121,9 @@ function validateInputs(data)
     }
   });
 
-  return errors;
+  if (errors.length)
+    var error_msg = formatErrorMessage(errors);
+
+  return error_msg;
 }
 /* ======= start - start main validator function ======= */
