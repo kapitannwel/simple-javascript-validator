@@ -1,0 +1,24 @@
+{
+  "name": "simple-javascript-validator",
+  "version": "1.0.0",
+  "description": "Simple Javascript Validator",
+  "main": "simple-javascript-validator.js",
+  "scripts": {
+    "test": "sjv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kapitannwel/simple-javascript-validator.git"
+  },
+  "keywords": [
+    "simple",
+    "javascript",
+    "validator"
+  ],
+  "author": "kapitannwel <kapitannwel@gmail.com> (http://www.facebook.com/kapitanpulido)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kapitannwel/simple-javascript-validator/issues"
+  },
+  "homepage": "https://github.com/kapitannwel/simple-javascript-validator#readme"
+}
