@@ -1,6 +1,8 @@
 # Simple Javascript Validator
 
-This package aims to validate the input data in javascript from the most common and simplest way.
+Not much, but it's an honest work! (wink)
+
+This package aims to validate the input data in javascript using the most common validation rules.
 
 
 ## Installation
