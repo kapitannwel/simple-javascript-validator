@@ -28,6 +28,7 @@ npm install simple-javascript-validator
 
 ## How To Use
 
+Please run the index.html file
 ```
 <script src="js/simple-javascript-validator.js"></script>
 
