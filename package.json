@@ -1,6 +1,6 @@
 {
   "name": "simple-javascript-validator",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Simple Javascript Validator",
   "main": "simple-javascript-validator.js",
   "scripts": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/kapitannwel/simple-javascript-validator/issues"
   },
-  "homepage": "https://github.com/kapitannwel/simple-javascript-validator#readme"
+  "homepage": "https://github.com/kapitannwel/simple-javascript-validator#readme",
+  "dependencies": {
+    "toastr": "^2.1.4"
+  }
 }
