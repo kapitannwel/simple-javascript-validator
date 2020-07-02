@@ -30,7 +30,7 @@ npm install simple-javascript-validator
 
 Please run the index.html file
 ```
-<script src="js/simple-javascript-validator.js"></script>
+<script src="simple-javascript-validator.min.js"></script>
 
 var full_name     = document.getElementById("name").value;
 var age           = document.getElementById("age").value;
