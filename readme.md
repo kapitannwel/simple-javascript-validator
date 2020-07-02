@@ -43,22 +43,15 @@ var validateData = {
   role  : role + '|gtzero'
 };
 
-var error_msgs = validateInputs(validateData);
+var error = validateInputs(validateData);
 
-if(error_msgs){
-  console.log(error_msgs);
-
-  //toastr.error(error_msgs, 'Ooops!');
-
-  e.preventDefault();
-}
-else
-  return true;
+if(error)
+  return false;
 ```
 
 ## License
 
-The MIT License (MIT)
+The [MIT License](https://opensource.org/licenses/MIT)
 
 ## Support
 
