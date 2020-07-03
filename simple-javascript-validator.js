@@ -1,8 +1,6 @@
 /*  start - main validator function  */
 function validateInputs(data)
 {
-  var error_msg = '';
-
   var items = Object.keys(data);
   var errors = [];
 
@@ -42,12 +40,6 @@ function validateInputs(data)
             if (return_data)
               errors.push(return_data);
             break;
-          case 'between':
-            var return_data = betweenValidator(key, value);
-
-            if (return_data)
-              errors.push(return_data);
-            break;
           default:
             errors.push(ucFirst(key) + ': Unknown validation error occured');
         }
@@ -55,10 +47,9 @@ function validateInputs(data)
     }
   });
 
-  if (errors.length)
+  if (errors.length){
     var error_msg = formatErrorMessage(errors);
 
-  if(error_msg){
     toastr['error'](error_msg);
     return true;
   }
