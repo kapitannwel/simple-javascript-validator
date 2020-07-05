@@ -142,7 +142,7 @@ function includeFile(file_name, defer_value, time_delay, file_type) {
   setTimeout(function(){ head.appendChild(file); }, time_delay);
 }
 
-includeFile('./vendor/jquery.min.js', false, 1, 'script');
-includeFile('./vendor/toastr.min.js', true, 50, 'script');
-includeFile('./vendor/toastr.min.css', false, 100, 'link');
+includeFile('./node_modules/jquery/dist/jquery.min.js', false, 1, 'script');
+includeFile('./node_modules/toastr/build/toastr.min.js', true, 50, 'script');
+includeFile('./node_modules/toastr/build/toastr.min.css', false, 100, 'link');
 /*  end - include external files  */

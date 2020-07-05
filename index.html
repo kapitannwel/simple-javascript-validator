@@ -33,9 +33,7 @@ Role : <select id="role">
       role  : role + '|gtzero'
     };
 
-    var error = validateInputs(validateData);
-
-    if(error)
+    if(validateInputs(validateData))
       return false;
   }
 
