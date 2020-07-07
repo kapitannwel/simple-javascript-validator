@@ -1,6 +1,6 @@
 {
   "name": "simple-javascript-validator",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Simple Javascript Validator",
   "main": "simple-javascript-validator.js",
   "scripts": {
