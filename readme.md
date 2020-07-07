@@ -12,11 +12,14 @@ npm install simple-javascript-validator
 
 ## Validation Rules
 
-- required = Value must be required
-- number = Value must be a number
-- email = Value must be an email
-- date = Value must be a valid date format
-- gtzero = Select tag must have a value
+| Validation | Rule |
+| --- | --- |
+| required | Value must be required |
+| number | Value must be a number |
+| email | Value must be an email |
+| date | Value must be a valid date format |
+| gtzero | Select tag must have a value |
+
 
 **gtzero** - Because select tag's initial value is zero as shown in the example below:
 ```
@@ -34,7 +37,7 @@ npm install simple-javascript-validator
 
 ## How To Use
 
-Please run the index.html file
+Please run the `index.html` file
 ```
 <script src="simple-javascript-validator.min.js"></script>
 
