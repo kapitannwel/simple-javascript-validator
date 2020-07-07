@@ -20,7 +20,6 @@ npm install simple-javascript-validator
 | date | Value must be a valid date format |
 | gtzero | Select tag must have a value |
 
-
 **gtzero** - Because select tag's initial value is zero as shown in the example below:
 ```
 <select>
@@ -74,3 +73,7 @@ The [MIT License](https://opensource.org/licenses/MIT)
 ## Support
 
 You can ask for support by emailing kapitannwel a t g m a i l d o t c o m
+
+## Donate
+
+Minimum [donation](https://www.paypal.me/kapitanpulido) is USD 100,000.00 - otherwise just use this for free (wink!)
