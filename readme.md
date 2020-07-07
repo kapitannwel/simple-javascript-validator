@@ -14,7 +14,6 @@ npm install simple-javascript-validator
 
 - required = Value must be required
 - number = Value must be a number
-- date = Value must be a number
 - email = Value must be an email
 - date = Value must be a valid date format
 - gtzero = Select tag must have a value
