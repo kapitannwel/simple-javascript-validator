@@ -1,40 +1,49 @@
 <html>
 <head>
 <title>Simple Javascript Validator</title>
-<script src="simple-javascript-validator.min.js" type="text/javascript"></script>
+<script src="simple-javascript-validator.js" type="text/javascript"></script>
 </head>
 <body>
-<form name="form_main" onsubmit="return saveForm();">
-Name : <input id="name" /><br/>
-Age : <input id="age" /><br/>
-Email : <input id="email_address" /><br/>
-Role : <select id="role">
-    <option value="0" selected="selected">- select -</option>
-    <option value="1">Admin</option>
-    <option value="2">Guest</option>
-  </select>
-<button >Save</button>
-
+<form name="form_main" onsubmit="return validateForm();">
+  Name : <input id="name" /><br/>
+  Age : <input id="age" /><br/>
+  Birthday : <input id="birthday" /><br/>
+  Email : <input id="email_address" /><br/>
+  Role : <select id="role">
+      <option value="0" selected="selected">- select -</option>
+      <option value="1">Admin</option>
+      <option value="2">Guest</option>
+    </select>
+  <button>Save</button>
 </form>
 
-
 <script>
-  function saveForm()
+  function validateForm()
   {
     var full_name     = document.getElementById("name").value;
     var age           = document.getElementById("age").value;
+    var birthdate     = document.getElementById("birthday").value;
     var email_address = document.getElementById("email_address").value;
     var role          = document.getElementById("role").value;
+
 
     var validateData = {
       name  : full_name + '|required',
       age   : age + '|required,number',
+      birthday : birthdate + '|required,date',
       email : email_address + '|required,email',
       role  : role + '|gtzero'
     };
 
-    if(validateInputs(validateData))
+    var errors = validateInputs(validateData);
+
+    if(errors){
+      console.log(errors);
+      //toastr['error'](errors);
+
       return false;
+    }
+
   }
 
 </script>

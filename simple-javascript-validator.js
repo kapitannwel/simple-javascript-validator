@@ -40,6 +40,12 @@ function validateInputs(data)
             if (return_data)
               errors.push(return_data);
             break;
+          case 'date':
+            var return_data = dateValidator(key, value);
+
+            if (return_data)
+              errors.push(return_data);
+            break;
           default:
             errors.push(ucFirst(key) + ': Unknown validation error occured');
         }
@@ -48,10 +54,9 @@ function validateInputs(data)
   });
 
   if (errors.length){
-    var error_msg = formatErrorMessage(errors);
+    var error_msgs = formatErrorMessage(errors);
 
-    toastr['error'](error_msg);
-    return true;
+    return error_msgs;
   }
   else
     return false;
@@ -122,27 +127,30 @@ function emailValidator(key, value)
 }
 /*  end - validate data if value is email  */
 
-/*  start - include external files  */
-function includeFile(file_name, defer_value, time_delay, file_type) {
-  var head = document.getElementsByTagName('HEAD')[0];
-  var file = document.createElement(file_type);
+/*  start - validate data if value is a date  */
+function dateValidator(key, value)
+{
+   const regExp = /^(\d\d?)\/(\d\d?)\/(\d{4})$/;
+   let matches = value.match(regExp);
+   let isValid = matches;
+   let maxDate = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-  file.type = file_type == 'script' ? 'text/javascript' : 'text/css';
+   if (matches) {
+     const month = parseInt(matches[1]);
+     const date = parseInt(matches[2]);
+     const year = parseInt(matches[3]);
 
-  if(file_type == 'script'){
-    file.src    = file_name;
-    file.defer  = defer_value;
-  }
+     isValid = month <= 12 && month > 0;
+     isValid &= date <= maxDate[month] && date > 0;
 
-  if(file_type == 'link'){
-    file.href = file_name;
-    file.rel  = 'stylesheet';
-  }
+     const leapYear = (year % 400 == 0)
+        || (year % 4 == 0 && year % 100 != 0);
+     isValid &= month != 2 || leapYear || date <= 28;
+   }
 
-  setTimeout(function(){ head.appendChild(file); }, time_delay);
+   if(!isValid)
+     return key + ' - invalid date format';
+
+   return;
 }
-
-includeFile('./node_modules/jquery/dist/jquery.min.js', false, 1, 'script');
-includeFile('./node_modules/toastr/build/toastr.min.js', true, 50, 'script');
-includeFile('./node_modules/toastr/build/toastr.min.css', false, 100, 'link');
-/*  end - include external files  */
+/*  end - validate data if value is a date  */
