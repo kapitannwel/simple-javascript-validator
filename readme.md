@@ -76,4 +76,4 @@ You can ask for support by emailing kapitannwel a t g m a i l d o t c o m
 
 ## Donate
 
-Minimum [donation](https://www.paypal.me/kapitanpulido) is USD 100,000.00 - otherwise just use this for free (wink!)
+Use this for free, [donation](https://www.paypal.me/kapitanpulido) is optional.
